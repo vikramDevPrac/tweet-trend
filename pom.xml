@@ -15,7 +15,7 @@
     <artifactId>demo-workshop</artifactId>
     <version>2.1.4</version>
     <name>demo-workshop</name>
-    <packaging>jar</packaging> q
+    <packaging>jar</packaging>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -115,6 +115,7 @@
                         <goals>
                             <goal>prepare-agent</goal>
                         </goals>
+
                     </execution>
                     <execution>
                         <id>report</id>

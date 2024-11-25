@@ -15,11 +15,11 @@ environment {
             }
         }
 
-        stage('SCM') {
-            steps {
-                git 'https://github.com/foo/bar.git'
-            }
-        }
+        // stage('SCM') {
+        //     steps {
+        //         git 'https://github.com/foo/bar.git'
+        //     }
+        // }
 
         stage('SonarQube analysis') {
             environment {

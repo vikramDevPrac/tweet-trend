@@ -11,15 +11,19 @@ environment {
     stages  {
         stage('Build') {
             steps {
-                sh 'mvn clean deploy'
+                echo "-----------Build started-----------"
+                sh 'mvn clean deploy -Dmaven.test.skip=true'
+                echo "-----------Build completed-----------"
             }
         }
 
-        // stage('SCM') {
-        //     steps {
-        //         git 'https://github.com/foo/bar.git'
-        //     }
-        // }
+        stage('test') {
+            steps {
+                echo "-----------Unit test started-----------"
+                sh 'mvn surefire-report:report'
+                echo "-----------Unit test compleed-----------"
+            }
+        }
 
         stage('SonarQube analysis') {
             environment {

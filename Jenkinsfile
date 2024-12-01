@@ -86,6 +86,8 @@ environment {
             steps {
                 script {
                 echo '<--------------- Docker Build Started --------------->'
+                echo 'this is the user getting used'
+                whoami
                 app = docker.build(imageName+":"+version)
                 echo '<--------------- Docker Build Ends --------------->'
                 }

@@ -1,6 +1,6 @@
 def registry = 'https://rautvr.jfrog.io'
 def imageName = 'rautvr.jfrog.io/vikramdevops-docker-local/ttrend'
-def version   = '2.1.4'
+def version   = '2.1.5'
 pipeline {
     agent {
         node {

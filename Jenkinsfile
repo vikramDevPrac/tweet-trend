@@ -109,7 +109,9 @@ environment {
         stage ("Deploy"){
             steps{
                 script{
-                    sh "./deploy.sh"
+                    echo '<----------Hello deploy started------------>'
+                    sh "helm install ttrend ttrend-0.1.0.tgz"
+                    echo '<-------------Helm deploy ends------------->'
                 }
                 
             }

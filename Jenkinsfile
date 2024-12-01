@@ -5,7 +5,7 @@ pipeline {
     agent {
         node {
             label 'maven'
-        }
+        },
     }
 environment {
     PATH = "/opt/maven/bin:$PATH" 
@@ -29,7 +29,7 @@ environment {
         }
 
         // stage('SonarQube analysis') {
-        //     environment {
+        //     environment {ex
         //         scannerHome = tool 'vikramdevops-sonar-scanner'
         //     }
         //     steps{
@@ -102,7 +102,17 @@ environment {
                 echo '<--------------- Docker Publish Ended --------------->'  
                 }
             }
-    } 
+    }
+
+        stage ("Deploy"){
+            steps{
+                script{
+                    sh "./deploy.sh"
+                }
+                
+            }
+
+        }
 
 
 
